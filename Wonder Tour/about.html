@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="img/website-logo.png" type="image/x-icon">
+
+    <title>Wonder Tour</title>
+</head>
+<body>
+
+    <header id="home-header">
+        <div class="logo-header">
+            <div class="logo">
+                <img src="img/website-logo.png" alt="Error Loading img...">
+            </div>
+            <div class="time-contact-btn">
+                <div class="header-time">
+                    <img src="img/clock.png" alt="Error Loading img...">
+                    <p>09:00AM — 05:00PM</p>
+                </div>
+                <div class="header-contact">
+                    <img src="img/phone.png" alt="Error Loading img...">
+                    <p>+1 323-913-4688</p>
+                </div>
+                <div class="header-btn">
+                    <button class="btn"><a href="contact-us.html">Get a Free Quote</a></button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="about.html" class="active">About</a> </li>
+                    <li> <a href="typography.html">Typography</a> </li>
+                    <li> <a href="contact-us.html">Contact Us</a> </li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <div class="facebook">
+                    <img src="img/facebook.png" alt="Error loading...">
+                </div>
+                <div class="twitter">
+                    <img src="img/twitter.png" alt="Error loading...">
+                </div>
+                <div class="google">
+                    <img src="img/google.png" alt="Error loading...">
+                </div>
+                <div class="instagram">
+                    <img src="img/instagram.png" alt="Error loading...">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about-bg">
+        <div class="main-heading">About Us</div>
+
+    </div>
+
+
+    <!-- //===========================================================// -->
+
+    <div class="discover-horizon">
+        <div class="img-c"></div>
+        <div class="horizon">
+            <p class="heading">Why Choose Us</p>
+            <div class="horizon-tab">
+                <button class="tablinks btn tab1 defaultOpen" onclick="openHorizonTabs(event, 'horizon-about')">SKILLS</button>
+                <button class="tablinks btn tab2" onclick="openHorizonTabs(event, 'horizon-chooseUs')">EXPERIENCE</button>
+                <button class="tablinks btn tab3" onclick="openHorizonTabs(event, 'horizon-mission')">MISSION</button>
+            </div>
+
+            <!-- =================================================== -->
+
+            <!-- Horizons Tab content -->
+            <div id="horizon-about" class="horizon-tabContent">
+                <p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements.
+                    We are passionate about travel and sharing the world's wonders with you.</p>
+                <div class="horizon-about-btn">
+                    <button class="btn1 btn">Get in Touch</button>
+                    <button class="btn2 btn">Read More</button>
+                </div>
+            </div>
+            <div id="horizon-chooseUs" class="horizon-tabContent">
+                <p>We are proud to offer excellent quality and value for money in our tours, which give you the chance
+                    to experience your chosen destination in an authentic and exciting way.</p>
+                <div class="horizon-chooseUs-btn">
+                    <button class="btn1 btn">Get in Touch</button>
+                    <button class="btn2 btn">Read More</button>
+                </div>
+            </div>
+            <div id="horizon-mission" class="horizon-tabContent">
+                <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for
+                    each and every travel service available in the industry.</p>
+                <div class="horizon-mission-btn">
+                    <button class="btn1 btn"><a href="contact-us.html">Get in Touch</a></button>
+                    <button class="btn2 btn"><a href="about.html">Read More</a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <!-- //===========================================================// -->
+
+
+
+    <!-- Slideshow Container -->
+    <div class="gallery">
+        <div class="main-heading">Gallery</div>
+        <div class="gallery-container">
+            <img src="img/gallery-img1.jpg" class="gallery-item gallery-item-1">
+            <img src="img/gallery-img2.jpg" class="gallery-item gallery-item-2">
+            <img src="img/gallery-img3.jpg" class="gallery-item gallery-item-3">
+            <img src="img/gallery-img4.jpg" class="gallery-item gallery-item-4">
+            <img src="img/gallery-img5.jpg" class="gallery-item gallery-item-5">            
+        </div>
+        <div class="gallery-controls">
+
+        </div>
+    </div>
+
+
+    <!-- //===========================================================// -->
+
+    <!-- Parallax Effect Container -->
+
+    <div class="parallax">
+        <div class="awards parallax-item">
+            <p>12</p>
+            <span>AWARDS</span>
+        </div>
+        <div class="tours parallax-item">
+            <p>194</p>
+            <span>TOURS</span>
+        </div>
+        <div class="travelers parallax-item">
+            <p>2k</p>
+            <span>TRAVELERS</span>
+        </div>
+        <div class="team parallax-item">
+            <p>25</p>
+            <span>TEAM MEMBERS</span>
+        </div>
+    </div>
+
+
+
+
+    <!-- //===========================================================// -->
+    
+    
+
+
+    <footer>
+        <div class="contact-us">
+            <div class="side-img">
+                <img src="img/footer.jpg">
+            </div>
+
+            <div class="containers">
+
+                <div class="menus">
+                    <div class="contact-us-menu">
+                        <p>Contact Us</p>
+                        <div class="phone">
+                            <img src="img/C-phone.png">
+                            <p>+1 013-275-8916</p>
+                        </div>
+                        <div class="email">
+                            <img src="img/C-message.png">
+                            <p>info@wondertours.org</p>
+                        </div>
+                        <div class="location">
+                            <img src="img/C-location.png">
+                            <p>2250 Crystal Springs Dr, Los Angeles, CA 90027</p>
+                        </div>
+                    </div>
+
+                    <div class="links-menu">
+                        <p>Quick Links</p>
+                        <ul class="links">
+                            <li> <a href="#about">About us</a> </li>
+                            <li> <a href="#tours">Our Tours</a> </li>
+                            <li> <a href="#team">Our Team</a> </li>
+                            <li> <a href="#services">Our Services</a> </li>
+                            <li> <a href="#gallery">Gallery</a> </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    All rights reserved. &nbsp; <span>&copy</span> Ayesha Ashfaq.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

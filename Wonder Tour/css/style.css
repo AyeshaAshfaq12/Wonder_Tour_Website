@@ -1,0 +1,1753 @@
+/*   ======================================================================   */
+/*   |                                                                    |   */
+/*   |                                                                    |   */
+/*   |                              DEVELOPER                             |   */
+/*   |                            AYESHA ASHFAQ                           |   */
+/*   |                                                                    |   */
+/*   |                                                                    |   */
+/*   ======================================================================   */
+
+
+/* CSS Reset */
+
+
+/* CSS Variables */
+:root {
+    /* --bg-color1: #162e44; */
+    --bg-color: #1f2e3b;
+    --primary-color: #01b3a7;
+    --secondary-color: white;
+
+
+    /* --gradient-color1: linear-gradient(90deg, #162e44, #01b3a7, #8de0da); */
+    --gradient-color: linear-gradient(90deg, #00485b, #01b3a7, #8de0da);
+
+
+    --font-color: white;
+    --font-family: 'Ubuntu';
+
+    --large-font-size: 4rem;
+    --medium-font-size: 3rem;
+    --small-font-size: 1.3rem;
+    --btn-font-size: 1rem;
+
+
+    @media only screen and (max-width: 420px) {
+        --large-font-size: 3rem;
+        --medium-font-size: 2rem;
+        --small-font-size: 0.9rem;
+        --btn-font-size: 0.7rem;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    font-weight: 200;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ================= UTILITY CLASSES =================== */
+
+/*#region */
+
+.btn {
+    padding: 0.8rem 1.4rem;
+    font-size: var(--btn-font-size);
+    outline: none;
+    border: none;
+    width: 11rem;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.main-heading {
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5rem 0 1.6rem;
+}
+
+
+/*#endregion */
+
+
+/* ================= INDEX PAGE =================== */
+
+/*#region */
+
+/* ================= Header =================== */
+
+.logo-header {
+    height: 5.5rem;
+    background-color: #626b6b;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header .logo {
+    width: 40%;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header .logo img {
+    width: 50%;
+}
+
+.logo-header .time-contact-btn {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header .time-contact-btn .header-time {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.3rem 1.2rem;
+    border-right: 1px solid rgb(139, 139, 139);
+}
+
+.logo-header .time-contact-btn .header-contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.3rem 1rem;
+}
+
+.logo-header .time-contact-btn img {
+    width: 10%;
+}
+
+.logo-header .time-contact-btn .header-btn button {
+    margin-left: 3.8rem;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+.logo-header .time-contact-btn .header-btn button:hover {
+    background-color: #537a79 !important;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    height: 4rem;
+    display: flex;
+    /* position: fixed; */
+}
+
+.navbar .ham-burger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    display: none;
+}
+
+.navbar .ham-burger-icon i {
+    color: #000;
+    font-size: var(--small-font-size);
+}
+
+.nav-items {
+    width: 50%;
+}
+
+.nav-items ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-items ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: var(--small-font-size);
+}
+
+.nav-items ul li a:hover,
+.nav-items ul li a.active {
+    font-weight: bold;
+}
+
+
+.social-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 23.5rem;
+
+}
+
+.social-links div {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    margin: 0 0.6rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: var(--transition);
+
+}
+
+.social-links div:hover {
+    background-color: #288a84;
+    animation: rotation 2s infinite linear;
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.social-links div img {
+    width: 16px;
+    height: 16px;
+}
+
+.social-links .google img {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ================= Home Bg =================== */
+
+.home-bg {
+    background: url('../img/home-bg1.jpg') no-repeat center center/cover;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+}
+
+.home-bg p {
+    margin-bottom: 0.5rem;
+    font-size: var(--small-font-size);
+    font-family: var(--font-family);
+}
+
+.home-bg h2 {
+    margin-bottom: 2rem;
+    font-size: var(--large-font-size);
+    font-family: var(--font-family);
+}
+
+.home-bg button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.home-bg button:hover {
+    background-color: #76c0bb;
+}
+
+/* ================= Home Cards =================== */
+
+.home-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    width: 100%;
+}
+
+/* 
+.home-cards .main-heading {
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.6rem;
+} */
+
+.home-cards .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home-cards .card-s {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 30rem; */
+    width: 24rem;
+    width: 31%;
+    padding: 1rem;
+}
+
+.home-cards .card-s img {
+    height: 26rem;
+    width: 22rem;
+    width: 100%;
+    border-radius: inherit;
+    margin-bottom: 1rem;
+}
+
+.home-cards .card-s p {
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--small-font-size);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: var(--bg-color);
+}
+
+.home-cards .bottom-heading {
+    font-size: var(--small-font-size);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.home-cards .bottom-heading a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.home-cards .bottom-heading a:hover {
+    letter-spacing: 2px;
+}
+
+
+/* ================= Discover Horizon (Index Page) =================== */
+/*                              AND                                    */
+/* ================= Discover Horizon (About us Page) ================ */
+
+.discover-horizon {
+    height: 30rem;
+    border-radius: 18px;
+    background: linear-gradient(270deg, #0d7475, #02bcaf, #8de0da);
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.discover-horizon .img-c {
+    width: 42%;
+    height: 75%;
+    background: url('../img/horizon.jpg') no-repeat center center/cover;
+    border-radius: 8px;
+}
+
+.discover-horizon .horizon {
+    width: 50%;
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    padding-left: 2rem;
+}
+
+.discover-horizon .horizon .heading {
+    font-weight: 500;
+    font-size: var(--medium-font-size);
+    margin-bottom: 1rem;
+}
+
+.horizon-tab {
+    display: flex;
+    margin-top: 0.5rem;
+
+}
+
+.horizon-tab button {
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: #e1e1e1;
+    /* margin: 0.6rem; */
+    padding: 0.5rem 0;
+    padding-right: 1rem;
+    border-bottom: 2px solid #e1e1e1;
+    transition: all 0.6s ease;
+}
+
+.horizon-tab button:hover,
+button.defaultOpen,
+button.active {
+    color: #a1fff9;
+    border-bottom: 2px solid #a1fff9;
+}
+
+
+.horizon-tab .tab1 {
+    text-align: left;
+    width: 8rem;
+
+}
+
+.horizon-tab .tab2 {
+    width: 14rem;
+}
+
+.horizon-tab .tab3 {
+    width: 10rem;
+}
+
+
+.horizon-tabContent {
+    display: none;
+}
+
+.horizon-tabContent p {
+    margin: 1.3rem 0 2rem;
+    line-height: 1.5;
+}
+
+.horizon-tabContent .btn1 {
+    margin-right: 1rem;
+    color: white;
+    background-color: black;
+    transition: all 0.8s ease;
+}
+
+.horizon-tabContent .btn1:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.horizon-tabContent .btn2 {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    transition: all 0.8s ease;
+}
+
+.horizon-tabContent .btn2:hover {
+    color: white;
+    background-color: black;
+}
+
+
+/* ================= Our Services =================== */
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+/* .our-services .main-heading {
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.6rem;
+} */
+
+.services-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* padding: 0 5rem 3rem; */
+}
+
+.services-c .title {
+    font-size: var(--small-font-size);
+    /* color: black; */
+    font-weight: 400;
+    margin: 0.8rem 0;
+    text-align: center;
+}
+
+/* .services-c .description{
+    color: #616161;
+} */
+
+.service-box:nth-child(even) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.service-box:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+.service-box {
+    margin: 1.5rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 0px 7px #b5b5b5;
+    box-shadow: 0 0 0px 7px #ffffff3d;
+    transition: box-shadow 0.6s ease;
+}
+
+.service-box:hover {
+    box-shadow: 0 0 8px 8px #ffffff5b;
+}
+
+.service-box img {
+    width: 15%;
+}
+
+/* ================= Tour Packages =================== */
+
+
+.our-tours .tour {
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    margin: 4rem 5rem;
+}
+
+.our-tours .tour .tour-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.our-tours .tour .tour-img img {
+    width: 95%;
+}
+
+.our-tours .tour .tour-package {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    /* padding-right: 4rem; */
+}
+
+.our-tours .tour .tour-package .destination {
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.our-tours .tour .tour-package .destination:hover {
+    color: var(--primary-color);
+}
+
+.our-tours .tour .tour-package img {
+    width: 20%;
+    margin-bottom: 1rem;
+}
+
+.our-tours .tour .tour-package .description {
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: #a9a9a9;
+}
+
+.our-tours .tour .tour-package button {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    transition: all 0.8s ease;
+}
+
+.our-tours .tour .tour-package button:hover {
+    /* background-color: var(--primary-color); */
+    background-color: #b9b9b970;
+    border: 2px solid white;
+}
+
+.our-tours .tour .price {
+    font-size: var(--small-font-size);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 4rem;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 45%;
+}
+
+/* ================= Our Team =================== */
+
+.our-team {
+    margin: 5rem 0;
+}
+
+.our-team .team-heading1 {
+    margin: 0.2rem !important;
+}
+
+.our-team .team-heading2 {
+    margin: 0.1rem !important;
+}
+
+.our-team .team-members {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+
+.our-team .member {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    box-shadow: 0 0 0px 7px #00ffea4c;
+    transition: box-shadow 0.6s ease;
+
+    border-top-left-radius: 12%;
+    border-bottom-right-radius: 12%;
+
+}
+
+.our-team .member:hover {
+    box-shadow: 0 0 8px 8px #00bbc1dc;
+}
+
+
+.our-team .member img {
+    width: 65%;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 4px solid #ffffff6a;
+}
+
+.our-team .member .name {
+    cursor: pointer;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.our-team .member .name:hover {
+    color: var(--primary-color);
+}
+
+.our-team .member .position {
+    font-weight: 400;
+    color: #47bcb4;
+    margin-bottom: 1rem;
+}
+
+.our-team .member .phone {
+    margin-bottom: 0.5rem;
+}
+
+/* ================= Gallery =================== */
+
+.gallery {
+    /* width: 100%; */
+    margin: 0 2rem;
+}
+
+.gallery .main-heading {
+    margin: 1.5rem 0 0.7rem !important;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    height: 25rem;
+    margin: 0 auto;
+    max-width: 62.5rem;
+    position: relative;
+}
+
+.gallery-item {
+    height: 12.5rem;
+    width: 20.5rem;
+
+    height: 15rem;
+    width: 25rem;
+
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    background-size: contain;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.gallery-item-1 {
+    left: 15%;
+    opacity: 0.4;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2,
+.gallery-item-4 {
+    height: 15.5rem;
+    width: 23.5;
+
+    height: 17rem;
+    width: 25rem;
+
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+    width: 26.5rem;
+    height: 18.5rem;
+
+    width: 30rem;
+    height: 20rem;
+
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+    left: 85%;
+    opacity: 0.4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    height: 3rem;
+}
+
+.gallery-controls button {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 0 2rem;
+    padding: 0 1rem;
+    text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+    outline: none;
+}
+
+.gallery-controls-previous {
+    position: relative;
+}
+
+.gallery-controls-previous::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 0.4rem;
+    width: 0.4rem;
+    left: -1.8rem;
+    top: -42%;
+    padding: 0.6rem;
+
+    border: solid #fff;
+    border-width: 0 5px 5px 0;
+
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.2s ease-in-out;
+}
+
+.gallery-controls-previous:hover::before {
+    left: -2.8rem;
+}
+
+.gallery-controls-next {
+    position: relative;
+}
+
+.gallery-controls-next::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 0.4rem;
+    width: 0.4rem;
+    right: -1.8rem;
+    top: 36%;
+    padding: 0.6rem;
+
+    border: solid #fff;
+    border-width: 0 5px 5px 0;
+
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right 0.2s ease-in-out;
+}
+
+.gallery-controls-next:hover::before {
+    right: -2.8rem;
+}
+
+.gallery-nav {
+    bottom: -0.9rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery-nav li {
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 1rem;
+    height: 0.6rem;
+    width: 0.6rem;
+}
+
+.gallery-nav li.gallery-item-selected {
+    background: #555;
+}
+
+
+
+/* ================= Footer =================== */
+
+footer {
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+    height: 27rem;
+    width: 100%;
+}
+
+footer .side-img {
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    border: 9px solid #d1fffa94;
+}
+
+footer .contact-us {
+    height: 23rem;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 0 9rem;
+    margin-top: 5rem;
+    background-color: var(--primary-color);
+    border-radius: 18px;
+}
+
+footer .containers {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer .menus {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+footer .contact-us-menu {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contact-us-menu>p {
+    color: #00485b;
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    margin-bottom: 1.7rem;
+}
+
+footer .contact-us-menu img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.8rem;
+}
+
+footer .contact-us-menu div {
+    margin-bottom: 1rem;
+    display: flex;
+    line-height: 1.5;
+}
+
+footer .contact-us-menu div p {
+    cursor: pointer;
+}
+
+
+footer .links-menu {
+    width: 52%;
+    padding-left: 3rem;
+}
+
+
+footer .links-menu .links li {
+    list-style: none;
+    margin: 0.5rem 0;
+    font-size: var(--small-font-size);
+}
+
+footer .links-menu .links li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .links-menu .links li a:hover {
+    color: #c9fefdc5;
+}
+
+footer .links-menu>p {
+    color: #00485b;
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    margin-bottom: 1.7rem;
+}
+
+footer .copyright {
+    color: #00485b;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    margin-left: 9rem;
+    /* justify-content: center; */
+
+}
+
+
+
+/*#endregion */
+
+
+
+/* ================= CONTACT US PAGE =================== */
+
+/*#region */
+
+#contact-us {
+    height: 30rem;
+    background-color: #40878680;
+    display: flex;
+    margin: 4rem 4rem;
+    margin-top: 5rem;
+    border-radius: 0.3rem;
+
+}
+
+#contact-us .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 7rem;
+}
+
+#contact-us .left .label {
+    font-size: 2.6rem;
+    font-weight: bold;
+
+    margin-bottom: 1.7rem;
+}
+
+#contact-us .left .message {
+    display: flex;
+    margin-bottom: 1.4rem;
+
+}
+
+#contact-us .left .phone {
+    display: flex;
+    margin-bottom: 1.4rem;
+}
+
+#contact-us .left .location {
+    display: flex;
+    margin-bottom: 1.4rem;
+}
+
+#contact-us .left .contact-us-img {
+    width: 6%;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+#contact-us .left .bottom-left .heading {
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    margin: 1rem 0;
+}
+
+#contact-us .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2.6rem 2rem;
+
+    padding-right: 5.5rem;
+}
+
+#contact-us .right .text {
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+#contact-us .right #message {
+    height: 8rem;
+    resize: none;
+}
+
+#contact-us .right button {
+    height: 3rem;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+#contact-us .right input,
+textarea {
+    padding: 1rem 0.8rem;
+    background: #FFFFFF4D;
+    border: none;
+    outline: none;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom: 5px solid white;
+}
+
+#contact-us .right input::placeholder,
+textarea::placeholder {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*#endregion */
+
+
+/* =================  TYPOGRAPHY PAGE =================== */
+
+/*#region */
+
+.typography-bg {
+    background: url('../img/home-bg2.jpg') no-repeat center center/cover;
+    opacity: 0.7;
+
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headings-container {
+    display: flex;
+    margin: 3rem;
+}
+
+/*===================== Utility Heading Class ===========================*/
+.heading-1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.heading-2 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.heading-3 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.heading-4 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.heading-5 {
+    font-size: 2.1rem;
+    margin: 1rem 0;
+}
+
+.heading-6 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+/*=======================================================================*/
+
+.headings-container .heading-description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headings-container .heading-description div {
+    margin: 0.5rem 0 !important;
+}
+
+/* .headings-container .heading-description div p{
+    margin: 0.5rem 0;
+} */
+.headings-container .heading-name {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: 2.5rem;
+}
+
+/*#endregion */
+
+
+/* =================  About PAGE =================== */
+
+/*#region */
+
+.about-bg {
+    background: url('../img/home-bg3.jpg') no-repeat center center/cover;
+
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+/*#endregion */
+
+
+
+/* ================= ABOUT US PAGE =================== */
+
+/*#region */
+
+.parallax {
+
+    /*========= for parallax effect ============ */
+
+    background-image: url('../img/parallax-img.png');
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* ==================================== */
+
+    margin: 7rem 0;
+    height: 26rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.parallax .parallax-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5rem;
+    border-right: 1px solid #fff;
+}
+
+.parallax .team {
+    border: none;
+    outline: none;
+}
+
+.parallax .parallax-item p {
+    font-size: 6rem;
+}
+
+.parallax .parallax-item span {
+    font-size: var(--small-font-size);
+}
+
+
+/*#endregion */
+
+
+/* ================= Responsiveness (IPhone 12 Pro) =================== */
+
+/*#region */
+/* 
+@media only screen and (max-width: 850px) and (max-width: 420px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+} */
+
+@media screen and (max-width: 420px) {
+    .nav-items {
+        display: none;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .ham-burger-icon a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {
+    .cards {
+        justify-content: center;
+    }
+
+    .home-cards .card-s {
+        width: 98%;
+    }
+}
+
+
+/*#endregion */
+
+
+/* ================= Responsiveness (IPad Air) =================== */
+
+/*#region */
+
+
+@media only screen and (max-width: 850px) {
+
+    .btn {
+        padding: 0.5rem 1.1rem;
+        width: 9rem;
+    }
+
+    header {
+        display: none;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .home-cards .card-s {
+        width: 47%;
+    }
+
+    .discover-horizon {
+        margin: 2rem;
+        height: 25rem;
+    }
+
+    .discover-horizon .img-c {
+        width: 36%;
+    }
+
+    .discover-horizon .horizon {
+        width: 56%;
+        height: 70%;
+    }
+
+    .discover-horizon .horizon .heading {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+    }
+
+
+    .horizon-tab button {
+        font-size: 0.9rem;
+    }
+
+    .our-services {
+        padding: 1rem;
+    }
+
+    .service-box {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .our-tours .tour {
+        margin: 3rem 2rem;
+    }
+
+    .our-tours .tour .tour-img img {
+        width: 100%;
+    }
+
+
+    .our-tours .tour .tour-package .description {
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .our-tours .tour .price {
+        font-size: 1rem;
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .our-team .team-members {
+        padding: 0 2rem;
+    }
+
+
+    .our-team .member {
+        width: 40%;
+    }
+
+
+    .gallery-item {
+        height: 14rem;
+        width: 16rem;
+    }
+
+    .gallery-item-2,
+    .gallery-item-4 {
+        height: 16rem;
+        width: 20rem;
+    }
+
+    .gallery-item-3 {
+        height: 19rem;
+        width: 25rem;
+    }
+
+
+    footer .side-img img {
+        /* width: 90%; */
+    }
+
+    footer .contact-us {
+        margin: 0 3rem;
+    }
+
+    footer .links-menu {
+        padding-left: 5rem;
+    }
+
+    footer .copyright {
+        margin-left: 4rem;
+    }
+
+    /* ================= ABOUT US PAGE =================== */
+
+    .parallax .parallax-item {
+        padding: 0 2rem;
+    }
+
+    /* ================= CONTACT US PAGE =================== */
+
+    #contact-us {
+        margin: 4rem 4rem;
+    }
+
+    #contact-us .left {
+        padding: 4rem 3rem;
+    }
+
+    #contact-us .left .label {
+        font-size: 2rem;
+        margin-bottom: 1.7rem;
+    }
+
+    #contact-us .left .contact-us-img {
+        width: 11%;
+        margin-right: 1.2rem;
+    }
+
+    #contact-us .right {
+        margin: 2.6rem 1rem;
+        padding-right: 1rem;
+    }
+
+    #contact-us .right .text {
+        font-size: 2rem;
+    }
+
+    #contact-us .right #message {
+        height: 6rem;
+        resize: none;
+    }
+
+    #contact-us .right button {
+        height: 2.3rem;
+        font-size: 1.2rem;
+    }
+}
+
+/*#endregion */
+
+
+/* ================= Responsiveness (IPhone 12 Pro) =================== */
+
+/*#region */
+
+
+@media only screen and (max-width: 420px) {
+
+    .btn {
+        padding: 0.3rem 0.9rem;
+        width: 7rem;
+    }
+
+    header {
+        display: none;
+    }
+
+    .home-bg {
+        height: 23rem;
+        padding-left: 1.8rem;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* gap: 2rem; */
+    }
+
+    .home-cards .card-s {
+        width: 90%;
+        height: 23rem;
+    }
+
+    .discover-horizon {
+        margin: 1rem;
+        height: 17rem;
+    }
+
+    .discover-horizon .img-c {
+        display: none;
+    }
+
+    .discover-horizon .horizon {
+        width: 100%;
+        height: 70%;
+        margin-left: 0;
+        padding: 0 0.5rem;
+    }
+
+    .discover-horizon .horizon .heading {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .horizon-tabContent p {
+        font-size: 0.7rem;
+    }
+
+    .horizon-tab button {
+        padding: 0.5rem 0;
+        padding-right: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .services-c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .service1,
+    .service4,
+    .service5 {
+        background-color: white;
+        color: black;
+    }
+
+    .service2,
+    .service3,
+    .service6 {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .services-c .description {
+        font-size: 0.7rem;
+    }
+
+    .our-services {
+        padding: 1rem;
+    }
+
+    .service-box {
+        margin: 1rem;
+        padding: 0.6rem;
+    }
+
+    .our-tours .tour {
+        margin: 3rem 2rem;
+        flex-direction: column;
+    }
+
+    .our-tours .tour .tour-img {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .our-tours .tour .tour-img img {
+        width: 100%;
+    }
+
+    .our-tours .tour .tour-package {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .our-tours .tour .tour-package .description {
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .our-tours .tour .price {
+        margin-left: 16.3rem;
+        font-size: 0.9rem;
+        width: 4rem;
+        height: 2.5rem;
+        border-top-left-radius: 45%;
+        border-bottom-left-radius: 0;
+    }
+
+    .our-team .team-members {
+        padding: 0 2rem;
+    }
+
+
+    .our-team .member {
+        width: 90%;
+    }
+
+    footer {
+        height: 25rem;
+    }
+
+    footer .side-img {
+        display: none;
+    }
+
+    footer .containers {
+        width: 100%;
+    }
+
+    footer .contact-us {
+        margin: 0 2rem;
+    }
+
+    footer .contact-us-menu {
+        width: 50%;
+        margin-left: 1rem;
+    }
+
+    footer .contact-us-menu img {
+        width: 22px;
+        height: 22px;
+        margin-right: 0.6rem;
+    }
+
+
+    footer .links-menu {
+        width: 50%;
+        padding-left: 3rem;
+    }
+
+    footer .copyright {
+        margin-left: 2.3rem;
+    }
+
+    /* ================= ABOUT US PAGE =================== */
+
+
+    .about-bg {
+        height: 20rem;
+    }
+
+    .parallax {
+        height: 15rem;
+    }
+
+    .parallax .parallax-item {
+        padding: 0 1rem;
+    }
+
+    .parallax .parallax-item p {
+        font-size: 2.5rem;
+    }
+
+    .parallax .parallax-item span {
+        font-size: 0.7rem;
+    }
+
+
+    /* ================= TYPOGRAPHY PAGE =================== */
+
+    .headings-container {
+        margin: 1.3rem;
+    }
+    .heading-1 {
+        font-size: 1.7rem;
+        margin: 0.5rem 0;
+    }
+    
+    .heading-2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+    
+    .heading-3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    .heading-4 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .heading-5 {
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+    }
+    
+    .heading-6 {
+        font-size: 0.6rem;
+        margin: 0.5rem 0;
+    }
+    .h-description{
+        font-size: 1rem;
+    }
+
+
+
+    /* ================= CONTACT US PAGE =================== */
+
+    #contact-us {
+        height: 37rem;
+        margin: 2rem 2rem;
+        flex-direction: column-reverse;
+    }
+
+    #contact-us .left {
+        padding: 0.7rem 1rem;
+        height: 45%;
+        width: 100%;
+    }
+
+    #contact-us .left .label {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+#contact-us .left .message {
+    display: flex;
+    margin-bottom: 0.9rem;
+
+}
+
+    #contact-us .left .contact-us-img {
+        width: 5%;
+        margin-right: 1rem;
+    }
+
+    #contact-us .right {
+        margin: 1rem 1rem;
+        padding-right: 1.7rem;
+        height: 55%;
+        width: 100%;
+    }
+
+    #contact-us .right .text {
+        font-size: 0.9rem;
+    }
+
+    #contact-us .right #message {
+        height: 4rem;
+        resize: none;
+    }
+
+    #contact-us .right button {
+        height: 1.7rem;
+        font-size: 1rem;
+    }
+
+}

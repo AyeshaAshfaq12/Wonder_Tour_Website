@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" href="img/website-logo.png" type="image/x-icon">
+
+    <title>Wonder Tour</title>
+</head>
+
+<body>
+    <header id="home-header">
+        <div class="logo-header">
+            <div class="logo">
+                <img src="img/website-logo.png" alt="Error Loading img...">
+            </div>
+            <div class="time-contact-btn">
+                <div class="header-time">
+                    <img src="img/clock.png" alt="Error Loading img...">
+                    <p>09:00AM — 05:00PM</p>
+                </div>
+                <div class="header-contact">
+                    <img src="img/phone.png" alt="Error Loading img...">
+                    <p>+1 323-913-4688</p>
+                </div>
+                <div class="header-btn">
+                    <button class="btn"><a href="contact-us.html">Get a Free Quote</a></button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="index.html" class="active">Home</a> </li>
+                    <li> <a href="about.html" >About</a> </li>
+                    <li> <a href="typography.html">Typography</a> </li>
+                    <li> <a href="contact-us.html">Contact Us</a> </li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <div class="facebook">
+                    <img src="img/facebook.png" alt="Error loading...">
+                </div>
+                <div class="twitter">
+                    <img src="img/twitter.png" alt="Error loading...">
+                </div>
+                <div class="google">
+                    <img src="img/google.png" alt="Error loading...">
+                </div>
+                <div class="instagram">
+                    <img src="img/instagram.png" alt="Error loading...">
+                </div>
+            </div>
+            <div class="ham-burger-icon">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="home-bg">
+        <p>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</p>
+        <h2>Explore <span>The World</span></h2>
+        <button class="btn"><a href="contact-us.html">Get in Touch</a></button>
+    </div>
+
+
+    <div class="home-cards">
+        <div class="main-heading">Our Tours</div>
+        <div class="cards">
+            <div class="card1 card-s">
+                <img src="img/card1.jpg" alt="Error loading...">
+                <p>Balloon Flights</p>
+            </div>
+            <div class="card2 card-s">
+                <img src="img/card2.jpg" alt="Error loading...">
+                <p>Mountain Holidays</p>
+            </div>
+            <div class="card3 card-s">
+                <img src="img/card3.jpg" alt="Error loading...">
+                <p>Beach Holidays</p>
+            </div>
+        </div>
+        <div class="bottom-heading">
+            <a href="#">Other Tours <span>&#8594</span></a>
+        </div>
+    </div>
+
+    <div class="discover-horizon">
+        <div class="img-c"></div>
+        <div class="horizon">
+            <p class="heading">Discover New Horizons</p>
+            <div class="horizon-tab">
+                <button class="tablinks btn tab1 defaultOpen" onclick="openHorizonTabs(event, 'horizon-about')">ABOUT
+                    US</button>
+                <button class="tablinks btn tab2" onclick="openHorizonTabs(event, 'horizon-chooseUs')">WHY CHOOSE
+                    US</button>
+                <button class="tablinks btn tab3" onclick="openHorizonTabs(event, 'horizon-mission')">OUR
+                    MISSION</button>
+            </div>
+
+            <!-- =================================================== -->
+
+            <!-- Horizons Tab content -->
+            <div id="horizon-about" class="horizon-tabContent">
+                <p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements.
+                    We are passionate about travel and sharing the world's wonders with you.</p>
+                <div class="horizon-about-btn">
+                    <button class="btn1 btn">Get in Touch</button>
+                    <button class="btn2 btn">Read More</button>
+                </div>
+            </div>
+            <div id="horizon-chooseUs" class="horizon-tabContent">
+                <p>We are proud to offer excellent quality and value for money in our tours, which give you the chance
+                    to experience your chosen destination in an authentic and exciting way.</p>
+                <div class="horizon-chooseUs-btn">
+                    <button class="btn1 btn">Get in Touch</button>
+                    <button class="btn2 btn">Read More</button>
+                </div>
+            </div>
+            <div id="horizon-mission" class="horizon-tabContent">
+                <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for
+                    each and every travel service available in the industry.</p>
+                <div class="horizon-mission-btn">
+                    <button class="btn1 btn">Get in Touch</button>
+                    <button class="btn2 btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- =================================================== -->
+        </div>
+    </div>
+
+
+    <div class="our-services" id="services">
+        <div class="main-heading">Our Services</div>
+        <div class="services-c">
+            <div class="service1 service-box">
+                <img src="img/equalizer.png" alt="Error loading...">
+                <p class="title">Personalized Matching</p>
+                <p class="description">Our unique matching system lets you find just the tour you want for your next
+                    holiday.</p>
+            </div>
+            <div class="service2 service-box">
+                <img src="img/medal.png" alt="Error loading...">
+                <p class="title">Wide Variety of Tours</p>
+                <p class="description">We offer a wide the variety of our personally picked tours with the destinations
+                    all over the globe.</p>
+            </div>
+            <div class="service3 service-box">
+                <img src="img/star.png" alt="Error loading...">
+                <p class="title">Highly Qualified Service</p>
+                <p class="description">Our tour managers are qualified, skilled, and friendly to bring you the best
+                    service.</p>
+            </div>
+            <div class="service4 service-box">
+                <img src="img/headphones.png" alt="Error loading...">
+                <p class="title">24/7 Support</p>
+                <p class="description">You can always get professional support from our staff 24/7 and ask any question
+                    you have.</p>
+            </div>
+            <div class="service5 service-box">
+                <img src="img/fire.png" alt="Error loading...">
+                <p class="title">Handpicked Hotels</p>
+                <p class="description">Our team offers only the best selection of affordable and luxury hotels to our
+                    clients.</p>
+            </div>
+            <div class="service6 service-box">
+                <img src="img/wallet.png" alt="Error loading...">
+                <p class="title">Best Price Guarantee</p>
+                <p class="description">If you find tours that are cheaper than ours, we will compensate the difference.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-tours" id="tours">
+        <div class="main-heading">Hot Packages</div>
+        <div class="tour">
+            <div class="tour-img">
+                <img src="img/tour1.jpg" alt="Benidorm, the beautiful beach in Spain">
+            </div>
+            <div class="tour-package">
+                <p class="destination">Benidorm, Spain</p>
+                <img src="img/star-rating.png" alt="Customer Reviews">
+                <p class="description">Benidorm is a buzzing resort with a big reputation for beach holidays. Situated
+                    in sunny Costa Blanca, the town is one of the original Spanish beach resorts. Benidorm is a seaside
+                    resort on the eastern coast of Spain, part of the Valencia region's famed Costa Blanca.</p>
+                <button class="btn"><a href="#">Buy This Tour</a></button>
+            </div>
+
+            <div class="price">$790</div>
+
+        </div>
+
+        <div class="tour">
+            <div class="tour-img">
+                <img src="img/tour2.jpg" alt="Mauritius Island ">
+            </div>
+            <div class="tour-package">
+                <p class="destination">Mauritius Island, Africa</p>
+                <img src="img/star-rating.png" alt="Customer Reviews">
+                <p class="description">The beautiful and inviting island nation of Mauritius is an ideal flop and drop
+                    at the conclusion of your safari. Indulge in the delightful scents of the fragrant. Mauritius is a
+                    subtropical island country in the Indian Ocean.</p>
+                <button class="btn"><a href="#">Buy This Tour</a></button>
+            </div>
+
+            <div class="price">$850</div>
+
+        </div>
+    </div>
+
+    <div class="our-team" id="team">
+        <div class="main-heading team-heading1">Different People</div>
+        <div class="main-heading team-heading2">One Mission</div>
+        <div class="team-members">
+            <div class="member1 member">
+                <img src="img/team-member1.jpg" alt="Team Founder">
+                <p class="name">Diana Robinson</p>
+                <p class="position">Founder, Owner</p>
+                <p class="phone">+1 323-913-4688</p>
+            </div>
+            <div class="member2 member">
+                <img src="img/team-member2.jpg" alt="Team Travel Agent">
+                <p class="name">Peter McMillan</p>
+                <p class="position">Travel Agent</p>
+                <p class="phone">+1 301-243-1670</p>
+            </div>
+            <div class="member3 member">
+                <img src="img/team-member3.jpg" alt="Team Tour Consultant">
+                <p class="name">Jill Peterson</p>
+                <p class="position">Tour Consultant</p>
+                <p class="phone">+1 325-443-3723</p>
+            </div>
+            <div class="member4 member">
+                <img src="img/team-member4.jpg" alt="Team PR Manager">
+                <p class="name">James Smith</p>
+                <p class="position">PR Manager</p>
+                <p class="phone">+1 320-333-9801</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Slideshow container -->
+    <div class="gallery">
+        <div class="main-heading">Gallery</div>
+        <div class="gallery-container">
+            <img src="img/gallery-img1.jpg" class="gallery-item gallery-item-1">
+            <img src="img/gallery-img2.jpg" class="gallery-item gallery-item-2">
+            <img src="img/gallery-img3.jpg" class="gallery-item gallery-item-3">
+            <img src="img/gallery-img4.jpg" class="gallery-item gallery-item-4">
+            <img src="img/gallery-img5.jpg" class="gallery-item gallery-item-5">            
+        </div>
+        <div class="gallery-controls">
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="contact-us">
+            <div class="side-img">
+                <img src="img/footer.jpg">
+            </div>
+
+            <div class="containers">
+
+                <div class="menus">
+                    <div class="contact-us-menu">
+                        <p>Contact Us</p>
+                        <div class="phone">
+                            <img src="img/C-phone.png">
+                            <p>+1 013-275-8916</p>
+                        </div>
+                        <div class="email">
+                            <img src="img/C-message.png">
+                            <p>info@wondertours.org</p>
+                        </div>
+                        <div class="location">
+                            <img src="img/C-location.png">
+                            <p>2250 Crystal Springs Dr, Los Angeles, CA 90027</p>
+                        </div>
+                    </div>
+
+                    <div class="links-menu">
+                        <p>Quick Links</p>
+                        <ul class="links">
+                            <li> <a href="#about">About us</a> </li>
+                            <li> <a href="#tours">Our Tours</a> </li>
+                            <li> <a href="#team">Our Team</a> </li>
+                            <li> <a href="#services">Our Services</a> </li>
+                            <li> <a href="#gallery">Gallery</a> </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    All rights reserved. &nbsp; <span>&copy</span> Ayesha Ashfaq.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
